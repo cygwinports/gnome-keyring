@@ -1,6 +1,7 @@
 category: Gnome
-requires: cygwin glib2 gtk2-x11
-sdesc: "GNOME Desktop password management system (runtime)"
+requires: cygwin glib2-devel
+external-source: gnome-keyring
+sdesc: "GNOME Desktop password management system (development)"
 ldesc: "GNOME Keyring is a system to store passwords and other 
 sensitive data in a standardized way across all GNOME applications.
 

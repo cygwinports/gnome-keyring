@@ -10,22 +10,24 @@ special "session" keyring which is not stored on disk and goes away when
 you log out.
 
 Runtime requirements:
-  cygwin-1.5.19-4
-  glib2-runtime-2.6.6-2
-  gtk2-x11-runtime-2.6.10-1
+  cygwin-1.5.21-2
+  glib2-2.12.4-1
+  gtk2-x11-2.10.6-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.19-4
-  autoconf2.5-2.59-3
+  cygwin-1.5.21-2
+  autoconf2.5-2.60-1
   automake1.9-1.9.6-1
-  binutils-20050610-1
+  binutils-20060817-1
+  cygport-0.2.6-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
-  libtool1.5-1.5.20-2
-  make-3.80-1
-  pkgconfig-0.17.2-2
-  sed-4.1.4-1
+  gtk-doc-1.7-1
+  libtool1.5-1.5.23a-1
+  make-3.81-1
+  pkg-config-0.20-1
+  sed-4.1.5-1
 
 Canonical download:
   ftp://ftp.gnome.org/pub/GNOME/sources/gnome-keyring/
@@ -33,48 +35,49 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnome-keyring-0.4.8-1-src.tar.bz2
+  unpack gnome-keyring-0.6.0-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./gnome-keyring-0.4.8-1.sh all
+  cygport ./gnome-keyring-0.6.0-1.cygport all
 
 This will create:
-  /usr/src/gnome-keyring-0.4.8-1-src.tar.bz2
-  /usr/src/gnome-keyring-0.4.8-1.tar.bz2
+  /usr/src/gnome-keyring-0.6.0-1-src.tar.bz2
+  /usr/src/gnome-keyring-0.6.0-1.tar.bz2
+  /usr/src/gnome-keyring-devel-0.6.0-1.tar.bz2
+  /usr/src/gnome-keyring-doc-0.6.0-1.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
+(gnome-keyring)
   /usr/bin/cyggnome-keyring-0.dll
   /usr/bin/gnome-keyring-daemon.exe
-  /usr/include/gnome-keyring-1/gnome-keyring.h
-  /usr/lib/libgnome-keyring.dll.a
-  /usr/lib/libgnome-keyring.la
-  /usr/lib/pkgconfig/gnome-keyring-1.pc
-  /usr/sbin/gnome-keyring-ask.exe
-  /usr/share/doc/Cygwin/gnome-keyring-0.4.8.README
-  /usr/share/doc/gnome-keyring-0.4.8/AUTHORS
-  /usr/share/doc/gnome-keyring-0.4.8/ChangeLog
-  /usr/share/doc/gnome-keyring-0.4.8/COPYING
-  /usr/share/doc/gnome-keyring-0.4.8/COPYING.LIB
-  /usr/share/doc/gnome-keyring-0.4.8/file-format.txt
-  /usr/share/doc/gnome-keyring-0.4.8/INSTALL
-  /usr/share/doc/gnome-keyring-0.4.8/keyring-intro.txt
-  /usr/share/doc/gnome-keyring-0.4.8/NEWS
-  /usr/share/doc/gnome-keyring-0.4.8/README
-  /usr/share/doc/gnome-keyring-0.4.8/TODO
+  /usr/lib/gnome-keyring-1/gnome-keyring-ask.exe
+  /usr/share/doc/Cygwin/gnome-keyring-0.6.0.README
+  /usr/share/doc/gnome-keyring-0.6.0/AUTHORS
+  /usr/share/doc/gnome-keyring-0.6.0/COPYING
+  /usr/share/doc/gnome-keyring-0.6.0/COPYING.LIB
+  /usr/share/doc/gnome-keyring-0.6.0/ChangeLog
+  /usr/share/doc/gnome-keyring-0.6.0/INSTALL
+  /usr/share/doc/gnome-keyring-0.6.0/NEWS
+  /usr/share/doc/gnome-keyring-0.6.0/README
+  /usr/share/doc/gnome-keyring-0.6.0/TODO
+  /usr/share/doc/gnome-keyring-0.6.0/file-format.txt
+  /usr/share/doc/gnome-keyring-0.6.0/keyring-intro.txt
   /usr/share/locale/ar/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/az/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/bg/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/bn/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/bn_IN/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/bs/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ca/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/cs/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/cy/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/da/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/de/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/dz/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/el/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/en_CA/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/en_GB/LC_MESSAGES/gnome-keyring.mo
@@ -85,20 +88,28 @@ Files included in the binary package:
   /usr/share/locale/fi/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/fr/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/gl/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/gu/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/hi/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/hr/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/hu/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/id/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/is/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/it/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ja/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/ka/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ko/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/lt/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/lv/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/mg/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/mk/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/ml/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/mn/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/mr/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ms/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/nb/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ne/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/nl/LC_MESSAGES/gnome-keyring.mo
-  /usr/share/locale/no/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/or/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/pa/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/pl/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/pt/LC_MESSAGES/gnome-keyring.mo
@@ -107,6 +118,7 @@ Files included in the binary package:
   /usr/share/locale/ru/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/rw/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/sk/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/sl/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/sq/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/sr/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/sr@Latn/LC_MESSAGES/gnome-keyring.mo
@@ -120,9 +132,32 @@ Files included in the binary package:
   /usr/share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 
+(gnome-keyring-devel)
+  /usr/include/gnome-keyring-1/gnome-keyring.h
+  /usr/lib/libgnome-keyring.dll.a
+  /usr/lib/libgnome-keyring.la
+  /usr/lib/pkgconfig/gnome-keyring-1.pc
+
+(gnome-keyring-doc)
+  /usr/share/gtk-doc/html/gnome-keyring/ch01.html
+  /usr/share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring.html
+  /usr/share/gtk-doc/html/gnome-keyring/gnome-keyring.devhelp
+  /usr/share/gtk-doc/html/gnome-keyring/gnome-keyring.devhelp2
+  /usr/share/gtk-doc/html/gnome-keyring/home.png
+  /usr/share/gtk-doc/html/gnome-keyring/index.html
+  /usr/share/gtk-doc/html/gnome-keyring/index.sgml
+  /usr/share/gtk-doc/html/gnome-keyring/left.png
+  /usr/share/gtk-doc/html/gnome-keyring/right.png
+  /usr/share/gtk-doc/html/gnome-keyring/style.css
+  /usr/share/gtk-doc/html/gnome-keyring/up.png
+
 --------------------
 
 Port Notes:
+
+----- version 0.6.0-1 -----
+Version bump for GNOME 2.16.
+Created separate devel and doc packages.
 
 ----- version 0.4.8-1 -----
 Version bump.

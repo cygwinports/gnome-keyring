@@ -10,10 +10,10 @@ special "session" keyring which is not stored on disk and goes away when
 you log out.
 
 Runtime requirements:
-  cygwin-1.5.25-11
+  cygwin-1.5.25-15
   GConf2-2.22.0-1
   glib2-2.16.3-1
-  gtk2-x11-2.12.9-1
+  gtk2-x11-2.12.10-1
   libdbus1_3-1.0.2-1
   libgcrypt11-1.4.0-1
   libintl8-0.15-1
@@ -25,14 +25,14 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
   binutils-20060817-1
-  cygport-0.3.11-1
+  cygport-0.3.12-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gnome-common-2.20.0-2
   gtk-doc-1.10-1
   libtool-2.2.2-2
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical homepage:
@@ -44,16 +44,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnome-keyring-2.22.2-1-src.tar.bz2
+  unpack gnome-keyring-2.22.3-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnome-keyring-2.22.2-1.cygport all
+  cygport ./gnome-keyring-2.22.3-1.cygport all
 
 This will create:
-  /usr/src/gnome-keyring-2.22.2-1-src.tar.bz2
-  /usr/src/gnome-keyring-2.22.2-1.tar.bz2
-  /usr/src/gnome-keyring-devel-2.22.2-1.tar.bz2
+  /usr/src/gnome-keyring-2.22.3-1-src.tar.bz2
+  /usr/src/gnome-keyring-2.22.3-1.tar.bz2
+  /usr/src/gnome-keyring-devel-2.22.3-1.tar.bz2
 
 -------------------------------------------
 
@@ -69,16 +69,16 @@ Files included in the binary packages:
   /usr/lib/gnome-keyring/gnome-keyring-pkcs11.dll
   /usr/lib/gnome-keyring/gnome-keyring-pkcs11.la
   /usr/share/dbus-1/services/org.gnome.keyring.service
-  /usr/share/doc/gnome-keyring-2.22.2/AUTHORS
-  /usr/share/doc/gnome-keyring-2.22.2/COPYING
-  /usr/share/doc/gnome-keyring-2.22.2/COPYING.LIB
-  /usr/share/doc/gnome-keyring-2.22.2/ChangeLog
-  /usr/share/doc/gnome-keyring-2.22.2/HACKING
-  /usr/share/doc/gnome-keyring-2.22.2/INSTALL
-  /usr/share/doc/gnome-keyring-2.22.2/NEWS
-  /usr/share/doc/gnome-keyring-2.22.2/README
-  /usr/share/doc/gnome-keyring-2.22.2/TODO
-  /usr/share/doc/gnome-keyring-2.22.2/keyring-intro.txt
+  /usr/share/doc/gnome-keyring-2.22.3/AUTHORS
+  /usr/share/doc/gnome-keyring-2.22.3/COPYING
+  /usr/share/doc/gnome-keyring-2.22.3/COPYING.LIB
+  /usr/share/doc/gnome-keyring-2.22.3/ChangeLog
+  /usr/share/doc/gnome-keyring-2.22.3/HACKING
+  /usr/share/doc/gnome-keyring-2.22.3/INSTALL
+  /usr/share/doc/gnome-keyring-2.22.3/NEWS
+  /usr/share/doc/gnome-keyring-2.22.3/README
+  /usr/share/doc/gnome-keyring-2.22.3/TODO
+  /usr/share/doc/gnome-keyring-2.22.3/keyring-intro.txt
   /usr/share/locale/ar/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/az/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/be/LC_MESSAGES/gnome-keyring.mo
@@ -188,6 +188,9 @@ Files included in the binary packages:
 --------------------
 
 Port Notes:
+
+----- version 2.22.3-1 -----
+Version bump.
 
 ----- version 2.22.2-1 -----
 Version bump for GNOME 2.22.

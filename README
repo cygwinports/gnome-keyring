@@ -11,26 +11,26 @@ you log out.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  GConf2-2.22.0-1
-  glib2-2.16.3-1
-  gtk2-x11-2.12.10-1
-  libdbus1_3-1.0.2-1
-  libgcrypt11-1.4.0-1
-  libintl8-0.15-1
-  libtasn1_3-1.3-1
-  pango-1.20.3-1
+  libdbus1_3-1.2.4-1
+  libgconf2_4-2.24.0-1
+  libgcrypt11-1.4.1-4
+  libglib2.0_0-2.18.3-1
+  libgtk2.0_0-2.14.5-1
+  libintl8-0.17-2
+  libpango1.0_0-1.22.3-1
+  libtasn1_3-1.4-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
-  binutils-20060817-1
-  cygport-0.3.12-1
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.2-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gnome-common-2.20.0-2
-  gtk-doc-1.10-1
-  libtool-2.2.2-2
+  gnome-common-2.24.0-1
+  gtk-doc-1.11-1
+  libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
   sed-4.1.5-2
@@ -44,16 +44,19 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnome-keyring-2.22.3-1-src.tar.bz2
+  unpack gnome-keyring-2.24.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnome-keyring-2.22.3-1.cygport all
+  cygport ./gnome-keyring-2.24.1-X.cygport all
 
 This will create:
-  /usr/src/gnome-keyring-2.22.3-1-src.tar.bz2
-  /usr/src/gnome-keyring-2.22.3-1.tar.bz2
-  /usr/src/gnome-keyring-devel-2.22.3-1.tar.bz2
+  /usr/src/gnome-keyring-2.24.1-X-src.tar.bz2
+  /usr/src/gnome-keyring-2.24.1-X.tar.bz2
+  /usr/src/libgnome-keyring-devel-2.24.1-X.tar.bz2
+  /usr/src/libgnome-keyring0-2.24.1-X.tar.bz2
+  /usr/src/libgp11-devel-2.24.1-X.tar.bz2
+  /usr/src/libgp11_0-2.24.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -63,22 +66,22 @@ Files included in the binary packages:
   /etc/gconf/schemas/gnome-keyring.schemas
   /etc/postinstall/gnome-keyring.sh
   /etc/preremove/gnome-keyring.sh
-  /usr/bin/cyggnome-keyring-0.dll
   /usr/bin/gnome-keyring-daemon.exe
+  /usr/bin/gnome-keyring.exe
   /usr/lib/gnome-keyring/gnome-keyring-ask.exe
   /usr/lib/gnome-keyring/gnome-keyring-pkcs11.dll
   /usr/lib/gnome-keyring/gnome-keyring-pkcs11.la
   /usr/share/dbus-1/services/org.gnome.keyring.service
-  /usr/share/doc/gnome-keyring-2.22.3/AUTHORS
-  /usr/share/doc/gnome-keyring-2.22.3/COPYING
-  /usr/share/doc/gnome-keyring-2.22.3/COPYING.LIB
-  /usr/share/doc/gnome-keyring-2.22.3/ChangeLog
-  /usr/share/doc/gnome-keyring-2.22.3/HACKING
-  /usr/share/doc/gnome-keyring-2.22.3/INSTALL
-  /usr/share/doc/gnome-keyring-2.22.3/NEWS
-  /usr/share/doc/gnome-keyring-2.22.3/README
-  /usr/share/doc/gnome-keyring-2.22.3/TODO
-  /usr/share/doc/gnome-keyring-2.22.3/keyring-intro.txt
+  /usr/share/doc/gnome-keyring-2.24.1/AUTHORS
+  /usr/share/doc/gnome-keyring-2.24.1/COPYING
+  /usr/share/doc/gnome-keyring-2.24.1/COPYING.LIB
+  /usr/share/doc/gnome-keyring-2.24.1/ChangeLog
+  /usr/share/doc/gnome-keyring-2.24.1/HACKING
+  /usr/share/doc/gnome-keyring-2.24.1/INSTALL
+  /usr/share/doc/gnome-keyring-2.24.1/NEWS
+  /usr/share/doc/gnome-keyring-2.24.1/README
+  /usr/share/doc/gnome-keyring-2.24.1/TODO
+  /usr/share/doc/gnome-keyring-2.24.1/keyring-intro.txt
   /usr/share/locale/ar/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/az/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/be/LC_MESSAGES/gnome-keyring.mo
@@ -113,6 +116,7 @@ Files included in the binary packages:
   /usr/share/locale/it/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ja/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ka/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/kn/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ko/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/lt/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/lv/LC_MESSAGES/gnome-keyring.mo
@@ -140,7 +144,7 @@ Files included in the binary packages:
   /usr/share/locale/sl/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/sq/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/sr/LC_MESSAGES/gnome-keyring.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gnome-keyring.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/sv/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/ta/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/te/LC_MESSAGES/gnome-keyring.mo
@@ -153,7 +157,10 @@ Files included in the binary packages:
   /usr/share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 
-(gnome-keyring-devel)
+(libgnome-keyring0)
+  /usr/bin/cyggnome-keyring-0.dll
+
+(libgnome-keyring-devel)
   /usr/include/gnome-keyring-1/gnome-keyring-memory.h
   /usr/include/gnome-keyring-1/gnome-keyring-result.h
   /usr/include/gnome-keyring-1/gnome-keyring.h
@@ -185,9 +192,38 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gnome-keyring/style.css
   /usr/share/gtk-doc/html/gnome-keyring/up.png
 
+(libgp11_0)
+  /usr/bin/cyggp11-0.dll
+
+(libgp11-devel)
+  /usr/include/gp11/gp11.h
+  /usr/include/gp11/pkcs11.h
+  /usr/include/gp11/pkcs11g.h
+  /usr/include/gp11/pkcs11n.h
+  /usr/lib/libgp11.dll.a
+  /usr/lib/libgp11.la
+  /usr/lib/pkgconfig/gp11-0.pc
+  /usr/share/gtk-doc/html/gp11/GP11Object.html
+  /usr/share/gtk-doc/html/gp11/ch01.html
+  /usr/share/gtk-doc/html/gp11/gp11-GP11Call.html
+  /usr/share/gtk-doc/html/gp11/gp11-gp11-test.html
+  /usr/share/gtk-doc/html/gp11/gp11-pkcs11.html
+  /usr/share/gtk-doc/html/gp11/gp11.devhelp
+  /usr/share/gtk-doc/html/gp11/gp11.devhelp2
+  /usr/share/gtk-doc/html/gp11/home.png
+  /usr/share/gtk-doc/html/gp11/index.html
+  /usr/share/gtk-doc/html/gp11/index.sgml
+  /usr/share/gtk-doc/html/gp11/left.png
+  /usr/share/gtk-doc/html/gp11/right.png
+  /usr/share/gtk-doc/html/gp11/style.css
+  /usr/share/gtk-doc/html/gp11/up.png
+
 --------------------
 
 Port Notes:
+
+----- version 2.24.1-1 -----
+Version bump for GNOME 2.24.
 
 ----- version 2.22.3-1 -----
 Version bump.

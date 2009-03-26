@@ -2,12 +2,16 @@ inherit gnome2
 
 DESCRIPTION="GNOME Desktop password management system"
 
-PKG_NAMES="${PN} lib${PN}0 lib${PN}-devel libgp11_0 libgp11-devel"
-gnome_keyring_CONTENTS="--exclude=gtk-doc etc/ usr/bin/*.exe usr/lib/${PN}/ usr/share/"
+PKG_NAMES="${PN} lib${PN}0 lib${PN}-devel libgcr0 libgcr-devel libgp11_0 libgp11-devel"
+gnome_keyring_CONTENTS="etc/ usr/bin/*.exe usr/lib/${PN}/ usr/share/dbus-1/
+                        usr/share/doc/ usr/share/locale/"
 libgnome_keyring0_CONTENTS="usr/bin/cyggnome-keyring-0.dll"
 libgnome_keyring_devel_CONTENTS="usr/include/gnome-keyring-1/ usr/lib/libgnome-keyring.*
                                  usr/lib/pkgconfig/gnome-keyring-1.pc
                                  usr/share/gtk-doc/html/gnome-keyring/"
+libgcr0_CONTENTS="usr/bin/cyggcr-0.dll usr/share/gcr/"
+libgcr_devel_CONTENTS="usr/include/gcr/ usr/lib/libgcr.*
+                        usr/lib/pkgconfig/gcr-0.pc"
 libgp11_0_CONTENTS="usr/bin/cyggp11-0.dll"
 libgp11_devel_CONTENTS="usr/include/gp11/ usr/lib/libgp11.*
                         usr/lib/pkgconfig/gp11-0.pc
@@ -19,4 +23,4 @@ CYGCONF_ARGS="
 	--disable-pam
 "
 
-DOCS="file-format.txt keyring-intro.txt"
+DOCS="keyring-intro.txt"

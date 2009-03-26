@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin gnome-keyring libdbus1_3 libglib2.0_0
+requires: cygwin gnome-keyring libdbus1_3 libgcc1 libglib2.0_0
 external-source: gnome-keyring
 sdesc: "GNOME Desktop password management system (library)"
 ldesc: "GNOME Keyring is a system to store passwords and other 

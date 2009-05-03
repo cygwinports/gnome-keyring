@@ -10,15 +10,15 @@ special "session" keyring which is not stored on disk and goes away when
 you log out.
 
 Runtime requirements:
-  cygwin-1.7.0-44
+  cygwin-1.7.0-45
   libdbus1_3-1.2.12-10
   libgcc1-4.3.2-2
   libgconf2_4-2.26.0-1
   libgcrypt11-1.4.1-4
-  libglib2.0_0-2.20.0-1
-  libgtk2.0_0-2.16.0-1
+  libglib2.0_0-2.20.1-1
+  libgtk2.0_0-2.16.1-1
   libintl8-0.17-10
-  libpango1.0_0-1.24.0-1
+  libpango1.0_0-1.24.1-1
   libtasn1_3-1.8-1
 
 Build requirements:
@@ -32,9 +32,9 @@ Build requirements:
   gnome-common-2.26.0-1
   gtk-doc-1.11-2
   libtasn1-1.8-1
-  libtool-2.2.6a-2
+  libtool-2.2.7a-12
   make-3.81-2
-  pkg-config-0.23a-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical homepage:
@@ -46,21 +46,21 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnome-keyring-2.26.0-X-src.tar.bz2
+  unpack gnome-keyring-2.26.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnome-keyring-2.26.0-X.cygport all
+  cygport ./gnome-keyring-2.26.1-X.cygport all
 
 This will create:
-  /usr/src/gnome-keyring-2.26.0-X-src.tar.bz2
-  /usr/src/gnome-keyring-2.26.0-X.tar.bz2
-  /usr/src/libgcr-devel-2.26.0-X.tar.bz2
-  /usr/src/libgcr0-2.26.0-X.tar.bz2
-  /usr/src/libgnome-keyring-devel-2.26.0-X.tar.bz2
-  /usr/src/libgnome-keyring0-2.26.0-X.tar.bz2
-  /usr/src/libgp11-devel-2.26.0-X.tar.bz2
-  /usr/src/libgp11_0-2.26.0-X.tar.bz2
+  /usr/src/gnome-keyring-2.26.1-X-src.tar.bz2
+  /usr/src/gnome-keyring-2.26.1-X.tar.bz2
+  /usr/src/libgcr-devel-2.26.1-X.tar.bz2
+  /usr/src/libgcr0-2.26.1-X.tar.bz2
+  /usr/src/libgnome-keyring-devel-2.26.1-X.tar.bz2
+  /usr/src/libgnome-keyring0-2.26.1-X.tar.bz2
+  /usr/src/libgp11-devel-2.26.1-X.tar.bz2
+  /usr/src/libgp11_0-2.26.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -184,6 +184,26 @@ Files included in the binary packages:
   /usr/lib/libgcr.dll.a
   /usr/lib/libgcr.la
   /usr/lib/pkgconfig/gcr-0.pc
+  /usr/share/gtk-doc/html/gcr/GcrCertificateBasicsWidget.html
+  /usr/share/gtk-doc/html/gcr/GcrCertificateDetailsWidget.html
+  /usr/share/gtk-doc/html/gcr/GcrImporter.html
+  /usr/share/gtk-doc/html/gcr/GcrParser.html
+  /usr/share/gtk-doc/html/gcr/GcrSimpleCertificate.html
+  /usr/share/gtk-doc/html/gcr/ch01.html
+  /usr/share/gtk-doc/html/gcr/gcr-GcrImportDialog.html
+  /usr/share/gtk-doc/html/gcr/gcr-GcrTokenManager.html
+  /usr/share/gtk-doc/html/gcr/gcr-GcrXxx.html
+  /usr/share/gtk-doc/html/gcr/gcr-gcr-certificate.html
+  /usr/share/gtk-doc/html/gcr/gcr-gcr-types.html
+  /usr/share/gtk-doc/html/gcr/gcr.devhelp
+  /usr/share/gtk-doc/html/gcr/gcr.devhelp2
+  /usr/share/gtk-doc/html/gcr/home.png
+  /usr/share/gtk-doc/html/gcr/index.html
+  /usr/share/gtk-doc/html/gcr/index.sgml
+  /usr/share/gtk-doc/html/gcr/left.png
+  /usr/share/gtk-doc/html/gcr/right.png
+  /usr/share/gtk-doc/html/gcr/style.css
+  /usr/share/gtk-doc/html/gcr/up.png
 
 (libgnome-keyring0)
   /usr/bin/cyggnome-keyring-0.dll
@@ -249,6 +269,9 @@ Files included in the binary packages:
 --------------------
 
 Port Notes:
+
+----- version 2.26.1-1 -----
+Version bump.
 
 ----- version 2.26.0-1 -----
 Initial release of GNOME 2.26 for Cygwin 1.7.

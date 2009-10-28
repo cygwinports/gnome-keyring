@@ -20,7 +20,6 @@ libgp11_devel_CONTENTS="usr/include/gp11/ usr/lib/libgp11.*
 
 CYGCONF_ARGS="
 	--libexecdir=/usr/lib/gnome-keyring
-	--disable-hal
 	--disable-pam
 "
 

@@ -2,6 +2,9 @@ inherit gnome2
 
 DESCRIPTION="GNOME Desktop password management system"
 
+# 2.28.2 tarball broken
+SRC_URI="${SRC_URI%.bz2}.gz"
+
 PKG_NAMES="${PN} lib${PN}0 lib${PN}-devel libgcr0 libgcr-devel libgp11_0 libgp11-devel"
 gnome_keyring_CONTENTS="etc/ usr/bin/*.exe usr/lib/${PN}/ usr/share/dbus-1/
                         usr/share/doc/ usr/share/locale/"

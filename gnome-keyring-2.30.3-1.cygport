@@ -2,7 +2,12 @@ inherit gnome2
 
 DESCRIPTION="GNOME Desktop password management system"
 
-PATCH_URI="2.30.1-as-needed.patch"
+PATCH_URI="
+	2.30.1-as-needed.patch
+	2.30.3-gcr-module-patch.patch
+	2.30.3-tests-modules.patch
+	2.30.3-tests-vpath.patch
+"
 
 PKG_NAMES="${PN} libgcr0 libgcr-devel libgp11_0 libgp11-devel"
 gnome_keyring_CONTENTS="etc/ usr/bin/*.exe usr/lib/${PN}/ usr/share/dbus-1/

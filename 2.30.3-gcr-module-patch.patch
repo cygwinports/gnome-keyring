@@ -1,0 +1,22 @@
+--- origsrc/gnome-keyring-2.30.3/gcr/Makefile.am	2010-06-21 08:51:38.000000000 -0500
++++ src/gnome-keyring-2.30.3/gcr/Makefile.am	2010-06-28 00:50:09.574652100 -0500
+@@ -56,7 +56,7 @@ libgcr_la_SOURCES = \
+ 	$(BUILT_SOURCES)
+ 
+ libgcr_la_CFLAGS = \
+-	-DPKCS11_MODULE_PATH=\""$(libdir)/gnome-keyring/gnome-keyring-pkcs11.so"\" \
++	-DPKCS11_MODULE_DIR=\""$(libdir)/gnome-keyring/"\" \
+ 	-DGCR_API_SUBJECT_TO_CHANGE \
+ 	-DUIDIR=\""$(uidir)"\"
+     
+--- origsrc/gnome-keyring-2.30.3/gcr/gcr-library.c	2010-04-26 12:47:37.000000000 -0500
++++ src/gnome-keyring-2.30.3/gcr/gcr-library.c	2010-06-28 00:55:10.416859300 -0500
+@@ -121,7 +121,7 @@ _gcr_initialize (void)
+ 	if (g_once_init_enter (&gcr_initialized)) {
+ 		
+ 		/* TODO: This needs reworking for multiple modules */
+-		module = gp11_module_initialize (PKCS11_MODULE_PATH, NULL, &error);
++		module = gp11_module_initialize (PKCS11_MODULE_DIR "gnome-keyring-pkcs11." G_MODULE_SUFFIX, NULL, &error);
+ 		if (module) {
+ 			gp11_module_set_pool_sessions (module, TRUE);
+ 			gp11_module_set_auto_authenticate (module, TRUE);

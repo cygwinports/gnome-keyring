@@ -17,7 +17,7 @@ Runtime requirements:
   libglib2.0_0-2.24.1-1
   libgtk2.0_0-2.20.1-1
   libintl8-0.17-11
-  libpango1.0_0-1.28.0-1
+  libpango1.0_0-1.28.1-1
   libtasn1_3-2.6-1
 
 Build requirements:
@@ -25,7 +25,7 @@ Build requirements:
   autoconf2.5-2.65-1
   automake1.11-1.11.1-1
   binutils-2.20.51-2
-  cygport-0.9.84-1
+  cygport-0.9.85-1
   gawk-3.1.7-1
   gcc4-core-4.3.4-3
   gnome-common-2.28.0-2
@@ -43,23 +43,26 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnome-keyring-2.30.1-X-src.tar.bz2
+  unpack gnome-keyring-2.30.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnome-keyring-2.30.1-X.cygport all
+  cygport ./gnome-keyring-2.30.3-X.cygport all
 
 This will create:
-  /usr/src/gnome-keyring-2.30.1-X-src.tar.bz2
-  /usr/src/gnome-keyring-2.30.1-X.tar.bz2
-  /usr/src/libgcr-devel-2.30.1-X.tar.bz2
-  /usr/src/libgcr0-2.30.1-X.tar.bz2
-  /usr/src/libgp11-devel-2.30.1-X.tar.bz2
-  /usr/src/libgp11_0-2.30.1-X.tar.bz2
+  /usr/src/gnome-keyring-2.30.3-X-src.tar.bz2
+  /usr/src/gnome-keyring-2.30.3-X.tar.bz2
+  /usr/src/libgcr-devel-2.30.3-X.tar.bz2
+  /usr/src/libgcr0-2.30.3-X.tar.bz2
+  /usr/src/libgp11-devel-2.30.3-X.tar.bz2
+  /usr/src/libgp11_0-2.30.3-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 2.30.3-1 -----
+Version bump.
 
 ----- version 2.30.1-1 -----
 Version bump for GNOME 2.30.

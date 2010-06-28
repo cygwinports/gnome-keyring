@@ -1,0 +1,77 @@
+FIXME: use "cyg" prefix for Cygwin, or remove prefix and use -module
+
+--- origsrc/gnome-keyring-2.30.3/gp11/tests/Makefile.am	2010-06-21 08:51:38.000000000 -0500
++++ src/gnome-keyring-2.30.3/gp11/tests/Makefile.am	2010-06-28 00:45:41.526320600 -0500
+@@ -30,7 +30,7 @@ include $(top_srcdir)/tests/gtest.make
+ lib_LTLIBRARIES = libgp11-test-module.la
+ 
+ libgp11_test_module_la_LDFLAGS = \
+-	-avoid-version
++	-avoid-version -no-undefined 
+ 
+ libgp11_test_module_la_CFLAGS = \
+ 	-I$(top_srcdir)/gp11 \
+--- origsrc/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-crypto.c	2010-06-21 08:51:38.000000000 -0500
++++ src/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-crypto.c	2010-06-28 00:55:30.770023400 -0500
+@@ -18,7 +18,7 @@ DEFINE_SETUP(crypto_session)
+ 	GList *slots;
+ 	
+ 	/* Successful load */
+-	module = gp11_module_initialize (".libs/libgp11-test-module.so", NULL, &err);
++	module = gp11_module_initialize (".libs/libgp11-test-module." G_MODULE_SUFFIX, NULL, &err);
+ 	SUCCESS_RES (module, err);
+ 	
+ 	slots = gp11_module_get_slots (module, TRUE);
+--- origsrc/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-module.c	2010-06-21 08:51:38.000000000 -0500
++++ src/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-module.c	2010-06-28 01:23:44.732912600 -0500
+@@ -12,7 +12,7 @@ DEFINE_SETUP(load_module)
+ 	GError *err = NULL;
+ 
+ 	/* Successful load */
+-	module = gp11_module_initialize (".libs/libgp11-test-module.so", NULL, &err);
++	module = gp11_module_initialize (".libs/libgp11-test-module."G_MODULE_SUFFIX, NULL, &err);
+ 	SUCCESS_RES (module, err);
+ }
+ 
+@@ -64,7 +64,7 @@ DEFINE_TEST(module_props)
+ 
+ 	g_object_get (module, "path", &path, NULL);
+ 	g_assert (path != NULL && "no module-path");
+-	g_assert (strcmp (".libs/libgp11-test-module.so", path) == 0 && "module path wrong");
++	g_assert (strcmp (".libs/libgp11-test-module."G_MODULE_SUFFIX, path) == 0 && "module path wrong");
+ 	g_free (path);
+ }
+ 
+--- origsrc/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-object.c	2010-06-21 08:51:38.000000000 -0500
++++ src/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-object.c	2010-06-28 00:55:53.747337600 -0500
+@@ -19,7 +19,7 @@ DEFINE_SETUP(prep_object)
+ 	GList *slots;
+ 	
+ 	/* Successful load */
+-	module = gp11_module_initialize (".libs/libgp11-test-module.so", NULL, &err);
++	module = gp11_module_initialize (".libs/libgp11-test-module."G_MODULE_SUFFIX, NULL, &err);
+ 	SUCCESS_RES (module, err);
+ 	
+ 	slots = gp11_module_get_slots (module, TRUE);
+--- origsrc/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-session.c	2010-06-21 08:51:38.000000000 -0500
++++ src/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-session.c	2010-06-28 00:55:56.371487700 -0500
+@@ -18,7 +18,7 @@ DEFINE_SETUP(load_session)
+ 	GList *slots;
+ 	
+ 	/* Successful load */
+-	module = gp11_module_initialize (".libs/libgp11-test-module.so", NULL, &err);
++	module = gp11_module_initialize (".libs/libgp11-test-module."G_MODULE_SUFFIX, NULL, &err);
+ 	SUCCESS_RES (module, err);
+ 	
+ 	slots = gp11_module_get_slots (module, TRUE);
+--- origsrc/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-slot.c	2010-06-21 08:51:38.000000000 -0500
++++ src/gnome-keyring-2.30.3/gp11/tests/unit-test-gp11-slot.c	2010-06-28 00:55:59.515667600 -0500
+@@ -14,7 +14,7 @@ DEFINE_SETUP(load_slots)
+ 	GList *slots;
+ 	
+ 	/* Successful load */
+-	module = gp11_module_initialize (".libs/libgp11-test-module.so", NULL, &err);
++	module = gp11_module_initialize (".libs/libgp11-test-module."G_MODULE_SUFFIX, NULL, &err);
+ 	SUCCESS_RES (module, err);
+ 	
+ 	slots = gp11_module_get_slots (module, TRUE);

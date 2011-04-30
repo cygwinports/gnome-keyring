@@ -2,6 +2,8 @@ inherit gnome2
 
 DESCRIPTION="GNOME Desktop password management system"
 
+PATCH_URI="3.0.1-tests-build.patch"
+
 PKG_NAMES="${PN} libgcr3_0 libgcr3-devel libgck0 libgck-devel"
 gnome_keyring_CONTENTS="--exclude=gcr-3 --exclude=gtk-doc etc/ usr/bin/gnome*
                         usr/lib/${PN}/ usr/lib/pkcs11 usr/share/"

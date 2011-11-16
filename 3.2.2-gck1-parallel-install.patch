@@ -1,0 +1,11 @@
+--- origsrc/gnome-keyring-3.2.2/docs/reference/gck/Makefile.am	2011-11-14 04:27:43.000000000 -0600
++++ src/gnome-keyring-3.2.2/docs/reference/gck/Makefile.am	2011-11-16 15:14:02.031593400 -0600
+@@ -7,7 +7,7 @@ AUTOMAKE_OPTIONS = 1.6
+ DOC_MODULE=gck
+ 
+ # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
+-#DOC_MODULE_VERSION=2
++DOC_MODULE_VERSION=@GCK_MAJOR@
+ 
+ 
+ # The top-level SGML file. You can change this if you want to.

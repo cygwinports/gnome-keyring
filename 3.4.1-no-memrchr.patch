@@ -10,7 +10,7 @@
  # p11-kit
 --- origsrc/gcr-3.4.1/egg/egg-armor.c	2011-11-23 11:14:05.000000000 -0600
 +++ src/gcr-3.4.1/egg/egg-armor.c	2012-05-04 03:54:37.391089900 -0500
-@@ -34,6 +34,23 @@
+@@ -34,6 +34,26 @@
  #include <ctype.h>
  #include <string.h>
  
@@ -20,11 +20,14 @@
 +void *
 +memrchr (const void *src, int c, size_t len)
 +{
++	const void *src_end = (const unsigned char *)src + len - 1;
 +	const void *last = NULL;
 +
 +	while ((src = memchr (src, c, len))) {
++		if (src > src_end)
++			break;
 +		last = src;
-+		src = (char *)src + sizeof(char);
++		src = (const unsigned char *)src + 1;
 +	}
 +
 +	return (void *) last;

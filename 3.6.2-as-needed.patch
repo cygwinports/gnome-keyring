@@ -1,0 +1,11 @@
+--- origsrc/gnome-keyring-3.6.2/pkcs11/gnome2-store/tests/Makefile.am	2012-09-26 03:28:36.000000000 -0500
++++ src/gnome-keyring-3.6.2/pkcs11/gnome2-store/tests/Makefile.am	2013-01-02 20:48:28.948636600 -0600
+@@ -39,7 +39,7 @@ test_gnome2_private_key_SOURCES = \
+ 	mock-gnome2-module.c mock-gnome2-module.h
+ 
+ test_import_CFLAGS = $(GCR_BASE_CFLAGS) $(GCK_CFLAGS)
+-test_import_LDADD = $(GCR_BASE_LIBS) $(GCK_LIBS) $(LDADD)
++test_import_LDADD = $(LDADD) $(GCR_BASE_LIBS) $(GCK_LIBS)
+ 
+ check_PROGRAMS = $(TEST_PROGS)
+ 

@@ -1,0 +1,36 @@
+inherit gnome2
+
+NAME="gnome-keyring"
+VERSION=3.6.2
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="GNOME Desktop password management system"
+DESCRIPTION="GNOME Keyring is a system to store passwords and other sensitive
+data in a standardized way across all GNOME applications.  A keyring stores a
+collection of encrypted passwords and encrypted information about those
+passwords. A user can have multiple keyrings, each for a different use, but
+there is a 'default' one. There is also a special 'session' keyring which is
+not stored on disk and goes away when you log out."
+REQUIRES="ca-certificates gcr"
+
+PATCH_URI="3.2.2-cygwin.patch
+           3.6.2-as-needed.patch"
+
+DEPEND="gnome-common gtk-doc
+	libgcrypt-devel
+	pkgconfig(dbus-1)
+	pkgconfig(gtk+-3.0)
+	pkgconfig(libtasn1)
+	pkgconfig(p11-kit-1)"
+
+DIFF_EXCLUDES="*.desktop.in"
+
+CYGCONF_ARGS="
+	--libexecdir=/usr/lib/gnome-keyring
+	--disable-pam
+	--disable-tests
+	--with-gtk=3.0
+	--with-root-certs=/usr/ssl/certs
+"
+
+DOCS="keyring-intro.txt"

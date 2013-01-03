@@ -1,5 +1,5 @@
---- origsrc/gnome-keyring-3.2.2/pkcs11/rpc-layer/gnome-keyring-module.in	2011-10-14 13:45:24.000000000 -0500
-+++ src/gnome-keyring-3.2.2/pkcs11/rpc-layer/gnome-keyring-module.in	2011-11-16 15:38:15.315716500 -0600
+--- origsrc/gnome-keyring-3.2.2/pkcs11/rpc-layer/gnome-keyring.module.in	2011-10-14 13:45:24.000000000 -0500
++++ src/gnome-keyring-3.2.2/pkcs11/rpc-layer/gnome-keyring.module.in	2011-11-16 15:38:15.315716500 -0600
 @@ -1,6 +1,6 @@
  
  # The file is installed/loaded from the default module p11-kit directory
